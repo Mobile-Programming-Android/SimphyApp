@@ -9,7 +9,13 @@ import org.v1nc3nz0.SimphyApp.R;
 public class HomeLayout implements LayoutConstructor
 {
 
+    private LinearLayout linear;
     private int home_layout;
+
+    public HomeLayout()
+    {
+        home_layout = R.layout.vertical_scroll_template;
+    }
 
     /*
         Cambia la impostazioni
@@ -23,8 +29,6 @@ public class HomeLayout implements LayoutConstructor
     @Override
     public void initialize()
     {
-        home_layout = R.layout.vertical_scroll_template;
-
 
     }
 
