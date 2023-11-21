@@ -7,11 +7,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--
-      RGB Color
+      RGB Colors
     -->
+    <color name="buttonColor">#F3BFF2</color>
     <color name="pinkBackground">#FF00FB</color>
     <color name="purpleBackground">#CC00FF</color>
-    <color name="pinkComponent">#E261E0</color>
-    <color name="purpleComponent">#D572EE</color>
 
 </resources>

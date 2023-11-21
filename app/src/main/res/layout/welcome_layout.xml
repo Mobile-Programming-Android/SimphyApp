@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/app_background"
+    android:background="@drawable/gradient_app_background"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context=".MainActivity">
@@ -34,11 +34,11 @@
             android:autoSizeMaxTextSize="32dp"
             android:autoSizeMinTextSize="16dp"
             android:autoSizeTextType="uniform"
-            android:background="@drawable/welcome_button"
+            android:background="@drawable/gradient_app_buttons"
             android:backgroundTint="@null"
             android:gravity="center"
             android:text="Iniziamo"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

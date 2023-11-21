@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/app_background"
+    android:background="@drawable/gradient_app_background"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context=".MainActivity">
 
 
-
-    <ScrollView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/vertical_linear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <Button
+
                 android:layout_width="512dp"
                 android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:autoSizeMaxTextSize="32dp"
                 android:autoSizeMinTextSize="16dp"
                 android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
+                android:background="@drawable/gradient_app_buttons"
                 android:text="Nozioni Teoriche"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="512dp"
                 android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:autoSizeMaxTextSize="32dp"
                 android:autoSizeMinTextSize="16dp"
                 android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
+                android:background="@drawable/gradient_app_buttons"
                 android:text="Esercizi"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="512dp"
                 android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:autoSizeMaxTextSize="32dp"
                 android:autoSizeMinTextSize="16dp"
                 android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
+                android:background="@drawable/gradient_app_buttons"
                 android:text="Brani Musicali"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="512dp"
                 android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:autoSizeMaxTextSize="32dp"
                 android:autoSizeMinTextSize="16dp"
                 android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
+                android:background="@drawable/gradient_app_buttons"
                 android:text="Mettimi alla prova"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/pulsante_riconoscimenti"
                 android:layout_width="512dp"
                 android:layout_height="96dp"
                 android:layout_marginBottom="10dp"
@@ -78,39 +76,13 @@
                 android:autoSizeMaxTextSize="32dp"
                 android:autoSizeMinTextSize="16dp"
                 android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
-                android:text="Impostazioni"
-                android:textColor="@color/white" />
-
-            <Button
-                android:layout_width="512dp"
-                android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:autoSizeMaxTextSize="32dp"
-                android:autoSizeMinTextSize="16dp"
-                android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
-                android:text="Tutorial App"
-                android:textColor="@color/white" />
-
-            <Button
-                android:layout_width="512dp"
-                android:layout_height="96dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:autoSizeMaxTextSize="32dp"
-                android:autoSizeMinTextSize="16dp"
-                android:autoSizeTextType="uniform"
-                android:background="@drawable/app_buttons"
-                android:gravity="center"
+                android:background="@drawable/gradient_app_buttons"
                 android:text="Riconoscimenti"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
+            
 
         </LinearLayout>
 
-    </ScrollView>
+    </HorizontalScrollView>
 
 </RelativeLayout>
