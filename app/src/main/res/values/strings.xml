@@ -7,6 +7,22 @@
     <!--
         Welcome Layout Strings
     -->
-    <string name="welcome_layout_id">welcome_layout</string>
-    <string name="welcome_button_id">welcome_button</string>
+    <string name="welcome_button_text">INIZIAMO</string>
+
+    <!--
+        DEBUG Strings
+    -->
+    <string name="debug_prefix">[Simphy App]</string>
+    <string name="normal_msg_prefix">[LOG]</string>
+    <string name="warn_msg_prefix">[WARN]</string>
+    <string name="error_msg_prefix">[ERROR]</string>
+
+    <string name="init_phase_prefix">Inizializzazione »</string>
+    <string name="comp_phase_prefix">Composizione »</string>
+    <string name="exec_phase_prefix">Esecuzione »</string>
+
+    <!--
+        Messages
+    -->
+    <string name="app_prefix">[Simply App]</string>
 </resources>

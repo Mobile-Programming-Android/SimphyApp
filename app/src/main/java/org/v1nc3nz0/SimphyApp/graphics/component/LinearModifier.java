@@ -1,6 +1,7 @@
 package org.v1nc3nz0.SimphyApp.graphics.component;
 
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class LinearModifier
 {
@@ -30,7 +31,7 @@ public class LinearModifier
      */
     public static LinearLayout setParams(LinearLayout layout, int width, int height)
     {
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width,height);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width,height);
         layout.setLayoutParams(params);
         return layout;
     }

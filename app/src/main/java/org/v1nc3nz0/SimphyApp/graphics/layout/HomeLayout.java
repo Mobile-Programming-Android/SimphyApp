@@ -27,6 +27,11 @@ public class HomeLayout implements LayoutConstructor
     }
 
     @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
     public void initialize()
     {
 
@@ -34,6 +39,12 @@ public class HomeLayout implements LayoutConstructor
 
     @Override
     public void show()
+    {
+
+    }
+
+    @Override
+    public void showOnly()
     {
         MainActivity.getInstance().setContentView(home_layout);
     }

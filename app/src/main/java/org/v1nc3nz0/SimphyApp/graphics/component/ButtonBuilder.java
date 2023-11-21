@@ -5,8 +5,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import org.v1nc3nz0.SimphyApp.MainActivity;
+import org.v1nc3nz0.SimphyApp.R;
+import org.v1nc3nz0.SimphyApp.graphics.layout.LayoutConstructor;
 
 public class ButtonBuilder
 {
@@ -27,21 +30,26 @@ public class ButtonBuilder
     }
 
     /*
-        Imposta il cambio di layout al click
-        del pulsante
-     */
-    public ButtonBuilder switchLayout(int layout_identifier)
-    {
-        onClick((event) -> MainActivity.getInstance().setContentView(layout_identifier));
-        return this;
-    }
-
-    /*
         Imposta l'evento di click sul pulsante
      */
     public ButtonBuilder onClick(View.OnClickListener listener)
     {
         button.setOnClickListener(listener);
+        return this;
+    }
+
+    /*
+        Imposta il background del pulsante
+     */
+    public ButtonBuilder setBackground(int drawable)
+    {
+        button.setBackground(MainActivity.getInstance().getDrawable(drawable));
+        return this;
+    }
+
+    public ButtonBuilder setGravity(int gravity)
+    {
+        button.setGravity(gravity);
         return this;
     }
 
@@ -58,9 +66,9 @@ public class ButtonBuilder
         Imposta i margini del pulsante
         da mettere in un layout lineare
      */
-    public ButtonBuilder setLinearMargin(int left, int top, int right, int bottom)
+    public ButtonBuilder setRelativeMargin(int left, int top, int right, int bottom)
     {
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.setMargins(left,top,right,bottom);
         button.setLayoutParams(params);
         return this;
@@ -80,7 +88,7 @@ public class ButtonBuilder
      */
     public ButtonBuilder setTextColor(int color)
     {
-        button.setBackgroundColor(color);
+        button.setTextColor(MainActivity.getInstance().getColor(color));
         return this;
     }
 
@@ -99,6 +107,29 @@ public class ButtonBuilder
     public ButtonBuilder setWidth(int pixels)
     {
         button.setWidth(pixels);
+        return this;
+    }
+
+    /*
+        Imposta il cambio di layout al click
+        del pulsante
+     */
+    public ButtonBuilder switchLayout(int layout_identifier)
+    {
+        onClick((event) -> MainActivity.getInstance().setContentView(layout_identifier));
+        return this;
+    }
+
+    /*
+        Imposta il cambio di layout al click
+        del pulsante
+     */
+    public ButtonBuilder switchLayout(LayoutConstructor layout,boolean build)
+    {
+        onClick((event) -> {
+            if(build) layout.show();
+            else layout.showOnly();
+        });
         return this;
     }
 

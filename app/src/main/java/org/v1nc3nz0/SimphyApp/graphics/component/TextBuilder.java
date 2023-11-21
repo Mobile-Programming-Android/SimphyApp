@@ -4,8 +4,10 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.v1nc3nz0.SimphyApp.MainActivity;
 import org.w3c.dom.Text;
 
 public class TextBuilder
@@ -18,6 +20,14 @@ public class TextBuilder
     public TextBuilder(Context context)
     {
         text = new TextView(context);
+    }
+
+    /*
+        Ottieni il testo modificato
+     */
+    public TextView build()
+    {
+        return text;
     }
 
     /*
@@ -47,7 +57,7 @@ public class TextBuilder
      */
     public TextBuilder setLinearMargin(int left, int top, int right, int bottom)
     {
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.setMargins(left,top,right,bottom);
         text.setLayoutParams(params);
         return this;
@@ -67,7 +77,7 @@ public class TextBuilder
      */
     public TextBuilder setTextColor(int color)
     {
-        text.setTextColor(color);
+        text.setTextColor(MainActivity.getInstance().getColor(color));
         return this;
     }
 
