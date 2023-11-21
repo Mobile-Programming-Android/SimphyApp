@@ -1,6 +1,5 @@
 package org.v1nc3nz0.SimphyApp.graphics.layout;
 
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import org.v1nc3nz0.SimphyApp.MainActivity;
@@ -10,7 +9,7 @@ public class HomeLayout implements LayoutConstructor
 {
 
     private LinearLayout linear;
-    private int home_layout;
+    private final int home_layout;
 
     public HomeLayout()
     {

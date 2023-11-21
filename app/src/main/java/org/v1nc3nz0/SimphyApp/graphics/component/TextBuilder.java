@@ -3,17 +3,15 @@ package org.v1nc3nz0.SimphyApp.graphics.component;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.v1nc3nz0.SimphyApp.MainActivity;
-import org.w3c.dom.Text;
 
 public class TextBuilder
 {
 
-    private TextView text;
+    private final TextView text;
 
 
     public TextBuilder(TextView text) { this.text = text; }

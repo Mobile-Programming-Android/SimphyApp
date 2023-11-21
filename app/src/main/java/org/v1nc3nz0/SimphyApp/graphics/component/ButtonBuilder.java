@@ -4,16 +4,14 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import org.v1nc3nz0.SimphyApp.MainActivity;
-import org.v1nc3nz0.SimphyApp.R;
 import org.v1nc3nz0.SimphyApp.graphics.layout.LayoutConstructor;
 
 public class ButtonBuilder
 {
-    private Button button;
+    private final Button button;
 
     public ButtonBuilder(Button button)  { this.button = button; }
     public ButtonBuilder(Context context)
@@ -32,10 +30,9 @@ public class ButtonBuilder
     /*
         Imposta l'evento di click sul pulsante
      */
-    public ButtonBuilder onClick(View.OnClickListener listener)
+    public void onClick(View.OnClickListener listener)
     {
         button.setOnClickListener(listener);
-        return this;
     }
 
     /*

@@ -1,14 +1,10 @@
 package org.v1nc3nz0.SimphyApp;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Window;
-
-import org.v1nc3nz0.SimphyApp.graphics.component.ButtonBuilder;
 import org.v1nc3nz0.SimphyApp.graphics.layout.HomeLayout;
-import org.v1nc3nz0.SimphyApp.graphics.layout.LayoutConstructor;
 import org.v1nc3nz0.SimphyApp.graphics.layout.WelcomeLayout;
 import org.v1nc3nz0.SimphyApp.logger.Logger;
 import org.v1nc3nz0.SimphyApp.managers.FileManager;
