@@ -4,10 +4,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.v1nc3nz0.SimphyApp.enums.AppPlaceholders;
 import org.v1nc3nz0.SimphyApp.graphics.layout.HomeLayout;
 import org.v1nc3nz0.SimphyApp.graphics.layout.WelcomeLayout;
-import org.v1nc3nz0.SimphyApp.logger.Logger;
+import org.v1nc3nz0.SimphyApp.logs.Logger;
 import org.v1nc3nz0.SimphyApp.managers.FileManager;
+import org.v1nc3nz0.SimphyApp.utils.Placeholder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,15 +34,20 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.instance = this;
         logger = new Logger();
         file_manager = new FileManager();
-        getLogger().sendInitMsg("Variabili");
 
         welcomeLayout = new WelcomeLayout();
         homeLayout = new HomeLayout();
-        getLogger().sendInitMsg("Inizializzione Layouts");
 
-        getWelcomeLayout().changeSettings();
-        getWelcomeLayout().initialize();
+        getWelcomeLayout().show();
+        getWelcomeLayout().build();
 
+        getLogger().send(
+                Placeholder.replacePH(
+                        MainActivity.getInstance().getString(R.string.application_start),
+                        AppPlaceholders.APP_NAME.toString(),
+                        MainActivity.getInstance().getString(R.string.app_name)
+                )
+        );
     }
 
     /*

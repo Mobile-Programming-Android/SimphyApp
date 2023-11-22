@@ -3,26 +3,37 @@
         Application Strings
     -->
     <string name="app_name">Simphy App</string>
+    <string name="app_prefix">[Simply App]</string>
+
+    <!--
+        DEBUG Messages
+
+        Placeholders:
+            %layout_name% » Nome Layout
+    -->
+    <string name="application_start">%appname% avviata con successo</string>
+    <string name="error_layout_already_show">Impossibile mostrare %layout_name% poichè viene già mostrato</string>
+    <string name="error_layout_null">Impossibile mostrare %layout_name% poichè ha un riferimento null</string>
+    <string name="layout_built">Costruzione %layout_name% Layout terminata</string>
+    <string name="layout_component_initialized">Componenti %layout_name% Layout costruiti</string>
+    <string name="layout_inizialized">%layout_name% Layout inizializzato</string>
+    <string name="layout_settings_changed">Impostazioni %layout_name% Layout cambiate</string>
+    <string name="layout_show">%layout_name% mostrato</string>
+
+    <!--
+        DEBUG Strings
+    -->
+    <string name="normal_msg_prefix">[LOG]</string>
+    <string name="warn_msg_prefix">[WARN]</string>
+    <string name="error_msg_prefix">[ERROR]</string>
+
+    <string name="init_phase_prefix">[Inizializzazione]</string>
+    <string name="comp_phase_prefix">[Composizione]</string>
+    <string name="exec_phase_prefix">[Esecuzione]</string>
 
     <!--
         Welcome Layout Strings
     -->
     <string name="welcome_button_text">INIZIAMO</string>
 
-    <!--
-        DEBUG Strings
-    -->
-    <string name="debug_prefix">[Simphy App]</string>
-    <string name="normal_msg_prefix">[LOG]</string>
-    <string name="warn_msg_prefix">[WARN]</string>
-    <string name="error_msg_prefix">[ERROR]</string>
-
-    <string name="init_phase_prefix">Inizializzazione »</string>
-    <string name="comp_phase_prefix">Composizione »</string>
-    <string name="exec_phase_prefix">Esecuzione »</string>
-
-    <!--
-        Messages
-    -->
-    <string name="app_prefix">[Simply App]</string>
 </resources>

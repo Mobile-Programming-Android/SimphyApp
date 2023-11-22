@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import org.v1nc3nz0.SimphyApp.MainActivity;
@@ -19,24 +20,31 @@ public class ButtonBuilder
         button = new Button(context);
     }
 
-    /*
-        Ottieni il pulsante
+    /**
+     * Ottieni il pulsante
+     *
+     * @return Ritorna il bottone creato
      */
     public Button build()
     {
         return button;
     }
 
-    /*
-        Imposta l'evento di click sul pulsante
+    /**
+     * Imposta l'evento di click sul pulsante
+     *
+     * @param listener Azioni che vengono eseguite al click del pulsante
      */
     public void onClick(View.OnClickListener listener)
     {
         button.setOnClickListener(listener);
     }
 
-    /*
-        Imposta il background del pulsante
+    /**
+     * Imposta il background del pulsante
+     *
+     * @param drawable Componente disegnabile
+     * @return Ritorna il builder
      */
     public ButtonBuilder setBackground(int drawable)
     {
@@ -44,14 +52,24 @@ public class ButtonBuilder
         return this;
     }
 
+    /**
+     * Imposta l'attributo gravity
+     * del pulsante
+     *
+     * @param gravity Posizione componenti nel pulsante
+     * @return Ritorna il builder
+     */
     public ButtonBuilder setGravity(int gravity)
     {
         button.setGravity(gravity);
         return this;
     }
 
-    /*
-        Imposta l'altezza del pulsante
+    /**
+     * Imposta l'altezza del pulsante
+     *
+     * @param pixels Altezza pulsante
+     * @return Ritorna il builder
      */
     public ButtonBuilder setHeight(int pixels)
     {
@@ -59,9 +77,33 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta i margini del pulsante
-        da mettere in un layout lineare
+    /**
+     * Imposta i margini del pulsante
+     *         da mettere in un layout frame
+     *
+     * @param left paddingLeft
+     * @param top paddingTop
+     * @param right paddingRight
+     * @param bottom paddingBottom
+     * @return Ritorna il builder
+     */
+    public ButtonBuilder setFrameMargin(int left, int top, int right, int bottom)
+    {
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.setMargins(left,top,right,bottom);
+        button.setLayoutParams(params);
+        return this;
+    }
+
+    /**
+     * Imposta i margini del pulsante
+     * da mettere in un layout relativo
+     *
+     * @param left paddingLeft
+     * @param top paddingTop
+     * @param right paddingRight
+     * @param bottom paddingBottom
+     * @return Ritorna il builder
      */
     public ButtonBuilder setRelativeMargin(int left, int top, int right, int bottom)
     {
@@ -71,8 +113,11 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta il testo
+    /**
+     * Imposta il testo
+     *
+     * @param text Testo pulsante
+     * @return Ritorna il builder
      */
     public ButtonBuilder setText(String text)
     {
@@ -80,8 +125,11 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta il colore del testo
+    /**
+     * Imposta il colore del testo
+     *
+     * @param color Color testo pulsante
+     * @return Ritorna il builder
      */
     public ButtonBuilder setTextColor(int color)
     {
@@ -89,8 +137,11 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta la dimensione del testo
+    /**
+     * Imposta la dimensione del testo
+     *
+     * @param pixels Dimensione testo pulsante
+     * @return Ritorna il builder
      */
     public ButtonBuilder setTextSize(int pixels)
     {
@@ -98,8 +149,11 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta la larghezza del pulsante
+    /**
+     * Imposta la larghezza del pulsante
+     *
+     * @param pixels Larghezza pulsante
+     * @return Ritorna il builder
      */
     public ButtonBuilder setWidth(int pixels)
     {
@@ -107,9 +161,12 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta il cambio di layout al click
-        del pulsante
+    /**
+     * Imposta il cambio di layout al click
+     * del pulsante
+     *
+     * @param layout_identifier Id layout
+     * @return Ritorna il builder
      */
     public ButtonBuilder switchLayout(int layout_identifier)
     {
@@ -117,15 +174,19 @@ public class ButtonBuilder
         return this;
     }
 
-    /*
-        Imposta il cambio di layout al click
-        del pulsante
+    /**
+     * Imposta il cambio di layout al click
+     * del pulsante
+     *
+     * @param layout Layout
+     * @param build Inserisci gli elementi
+     * @return Ritorna il builder
      */
     public ButtonBuilder switchLayout(LayoutConstructor layout,boolean build)
     {
         onClick((event) -> {
-            if(build) layout.show();
-            else layout.showOnly();
+            layout.show();
+            if(build) layout.build();
         });
         return this;
     }

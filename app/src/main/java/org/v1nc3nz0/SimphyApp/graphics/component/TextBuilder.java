@@ -20,17 +20,22 @@ public class TextBuilder
         text = new TextView(context);
     }
 
-    /*
-        Ottieni il testo modificato
+    /**
+     * Ottieni il testo modificato
+     *
+     * @return Testo modificato
      */
     public TextView build()
     {
         return text;
     }
 
-    /*
-        Imposta la posizione
-        del testo
+    /**
+     * Imposta la posizione
+     * del testo
+     *
+     * @param gravity Posizione
+     * @return Ritorna il builder
      */
     public TextBuilder setGravity(int gravity)
     {
@@ -38,10 +43,13 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta la dimensione del
-        container del testo
-        (height)
+    /**
+     * Imposta la dimensione del
+     * container del testo
+     * (height)
+     *
+     * @param pixels Altezza
+     * @return Ritorna il builder
      */
     public TextBuilder setHeight(int pixels)
     {
@@ -49,9 +57,15 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta i margini del testo
-        da mettere in un layout lineare
+    /**
+     * Imposta i margini del testo
+     * da mettere in un layout lineare
+     *
+     * @param left paddingLeft
+     * @param top paddingTop
+     * @param right paddingRight
+     * @param bottom paddingBottom
+     * @return Ritorna il builder
      */
     public TextBuilder setLinearMargin(int left, int top, int right, int bottom)
     {
@@ -61,8 +75,11 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta il testo
+    /**
+     * Imposta il testo
+     *
+     * @param text Testo
+     * @return Ritorna il builder
      */
     public TextBuilder setText(String text)
     {
@@ -70,8 +87,11 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta il colore del testo
+    /**
+     * Imposta il colore del testo
+     *
+     * @param color Colore testo
+     * @return Ritorna il builder
      */
     public TextBuilder setTextColor(int color)
     {
@@ -79,8 +99,11 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta la dimensione del testo
+    /**
+     * Imposta la dimensione del testo
+     *
+     * @param size Dimensione testo
+     * @return Ritorna il builder
      */
     public TextBuilder setTextSize(float size)
     {
@@ -88,8 +111,10 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta lo stile del testo
+    /**
+     * Imposta lo stile del testo
+     *
+     * @return Ritorna il builder
      */
     public TextBuilder setTextBold()
     {
@@ -97,10 +122,13 @@ public class TextBuilder
         return this;
     }
 
-    /*
-        Imposta la dimensione del
-        container del testo
-        (width)
+    /**
+     * Imposta la dimensione del
+     * container del testo
+     * (width)
+     *
+     * @param pixels Larghezza
+     * @return Ritorna il builder
      */
     public TextBuilder setWidth(int pixels)
     {
